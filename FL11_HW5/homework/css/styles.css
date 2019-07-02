@@ -1,15 +1,11 @@
-/*
- * Feel free to change name of colors if you need it
- * Feel free to add new colors if you need it
- */
-
+/* 
 :root {
   --bg-color--dark: #0b192f;
   --bg-color--header: #162b4d;
   --link: #fff;
   --link--hover: #b8b8b8;
   --bg-footer-color: #162b4d;
-}
+} */
 
 body {
   max-width: 1400px;
@@ -82,7 +78,7 @@ header ul {
 }
 
 li:hover {
-  background-color: #233b62;
+  background-color: #b8b8b8;
   cursor: pointer;
 }
 
@@ -369,7 +365,7 @@ footer p:nth-child(2) {
   }
 
   article:nth-child(odd)>div h2 {
-    margin-right: 2;
+    margin-right: 0;
   }
 
   article:nth-child(even)>div h2 {
