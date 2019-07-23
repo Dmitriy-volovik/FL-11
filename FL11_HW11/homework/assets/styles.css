@@ -64,6 +64,10 @@ button i:disabled {
   cursor: pointer;
 }
 
+.task-label{
+  color: #00b4fa;
+}
+
 .task-edit {
   display: none;
 }
