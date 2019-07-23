@@ -4,7 +4,7 @@ let newEvent = document.getElementById('newEvent');
 let ul = document.getElementById('list');
 let inputValue;
 const NUMBER_FOR_LOOP = 20;
-const MAX_COUNT_OF_LI = 4;
+const MAX_COUNT_OF_LI = 10;
 function inputHandler(text) {
   console.log('text - ', text);
   inputValue = text;
@@ -72,7 +72,7 @@ function addActionHandler() {
   document.getElementById('addBox').disabled = true;
   addBoxIMG.style.color = 'rgb(180, 179, 179)';
   addBoxIMG.style.cursor = 'default';
-     if (ul.getElementsByTagName('li').length > MAX_COUNT_OF_LI) {
+     if (ul.getElementsByTagName('li').length >= MAX_COUNT_OF_LI) {
          document.querySelector('.error-notice').style.display = 'block';
          newEvent.disabled = true;
          newEvent.placeholder = '';
@@ -105,7 +105,7 @@ function saveActionHandler(that) {
 function deleteActionHandler(that) {
     let parentLi = findParent(that, 'task');
     parentLi.remove();
-     if (ul.getElementsByTagName('li').length <= MAX_COUNT_OF_LI) {
+     if (ul.getElementsByTagName('li').length < MAX_COUNT_OF_LI) {
          document.querySelector('.error-notice').style.display = 'none';
          newEvent.disabled = false;
          newEvent.placeholder = 'Add new action';
