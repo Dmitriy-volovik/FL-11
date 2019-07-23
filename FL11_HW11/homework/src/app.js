@@ -6,7 +6,6 @@ let inputValue;
 const NUMBER_FOR_LOOP = 20;
 const MAX_COUNT_OF_LI = 10;
 function inputHandler(text) {
-  console.log('text - ', text);
   inputValue = text;
   if (inputValue) {
     addBoxIMG.style.color = '#00b4fa';
@@ -81,9 +80,7 @@ function addActionHandler() {
 }
 
 function editActionHandler(that) {
-  console.log('log - ', that);
   let parentLi = findParent(that, 'task');
-  console.log('parent - ', parentLi);
   let taskDescription = parentLi.querySelector('.task-description');
   taskDescription.style.display = 'none';
   let taskEdit = parentLi.querySelector('.task-edit');
