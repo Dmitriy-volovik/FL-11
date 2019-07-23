@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Homework 11 - TODO Cat List</title>
+    <link rel="stylesheet" href="./assets/material-icons/material-icons.css" />
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <header>
+      <h1>TODO Cat List</h1>
+      <span class="error-notice">Maximum item per list are created</span>
+      <input
+        type="text"
+        id="newEvent"
+        placeholder="Add new action"
+        oninput="inputHandler(this.value)"
+      />
+      <button id="addBox" disabled="disabled" onclick="addActionHandler()">
+        <i id="addBoxIMG" class="material-icons md-44">add_box</i>
+      </button>
+    </header>
+    <main>
+      <ul id="list">
+        <li class="task" id="1" draggable="true">
+          <div class="task-description">
+            <label class="container">
+              <span class="task-label">First task</span>
+              <input type="checkbox" onclick="checkboxHandler(event, this)" />
+              <span class="check-mark"></span>
+            </label>
+            <i
+              onclick="editActionHandler(this)"
+              class="material-icons md-30 cursor"
+              >create</i
+            >
+          </div>
+          <div class="edit-action task-edit">
+            <input type="text" />
+            <i onclick="saveActionHandler(this)" class="material-icons md-30 cursor"
+              >save</i
+            >
+          </div>
+          <div class="task-delete">
+            <i onclick="deleteActionHandler(this)" class="material-icons md-30 cursor">delete</i>
+          </div>
+        </li>
+       <li class="task" id="2" draggable="true">
+         <div class="task-description">
+           <label class="container">
+             <span class="task-label">Second task</span>
+             <input type="checkbox" onclick="checkboxHandler(event, this)" />
+             <span class="check-mark"></span>
+           </label>
+           <i onclick="editActionHandler(this)" class="material-icons md-30 cursor">create</i>
+         </div>
+         <div class="edit-action task-edit">
+           <input type="text" />
+           <i onclick="saveActionHandler(this)" class="material-icons md-30 cursor">save</i>
+         </div>
+         <div class="task-delete">
+           <i onclick="deleteActionHandler(this)" class="material-icons md-30 cursor">delete</i>
+         </div>
+       </li>
+        <li class="task" id="3" draggable="true">
+          <div class="task-description">
+            <label class="container">
+              <span class="task-label">Third task</span>
+              <input type="checkbox" onclick="checkboxHandler(event, this)" />
+              <span class="check-mark"></span>
+            </label>
+            <i onclick="editActionHandler(this)" class="material-icons md-30 cursor">create</i>
+          </div>
+          <div class="edit-action task-edit">
+            <input type="text" />
+            <i onclick="saveActionHandler(this)" class="material-icons md-30 cursor">save</i>
+          </div>
+          <div class="task-delete">
+            <i onclick="deleteActionHandler(this)" class="material-icons md-30 cursor">delete</i>
+          </div>
+        </li>
+      </ul>
+    </main>
+    <script src="./src/app.js"></script>
+  </body>
+</html>

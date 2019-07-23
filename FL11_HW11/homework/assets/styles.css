@@ -1,0 +1,151 @@
+/* Your styles goes here */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 96%;
+  height: 100%;
+  padding: 1% 2%;
+}
+header {
+  padding-bottom: 1%;
+  border-bottom: 5px solid rgb(173, 216, 230, 0.5);
+}
+main {
+  padding-top: 1%;
+  padding-right: 0.5%;
+}
+h1 {
+  text-align: center;
+  color: #00b4fa;
+}
+
+header button {
+  vertical-align: middle;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+header input {
+  width: 93%;
+  height: 40px;
+  padding-left: 10px;
+  margin-right: 20px;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+}
+
+ul li {
+  display: flex;
+  justify-content: space-between;
+}
+
+ul li p {
+  display: inline-block;
+}
+
+.material-icons.md-44 {
+  font-size: 44px;
+  color: rgb(180, 179, 179);
+}
+button i:disabled {
+  color: rgb(226, 0, 0);
+}
+.material-icons.md-30 {
+  vertical-align: middle;
+  font-size: 30px;
+  color: #7fc3f1;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.task-edit {
+  display: none;
+}
+.edit-action {
+  margin-top: -7px;
+  height: 41px;
+  width: 35%;
+  max-width: 50%;
+}
+.edit-action input {
+  height: 35px;
+  border: 1px solid rgb(151, 150, 150, 0.6);
+  border-radius: 3px;
+  padding-left: 10px;
+  width: 400px;
+}
+
+.error-notice{
+    display: none;
+    text-align: center;
+    color: red;
+}
+
+/* style checkbox */
+.container {
+  display: inline-block;
+  position: relative;
+  padding-left: 35px;
+  padding-right: 10px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.check-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: white;
+  border: 1px solid grey;
+}
+
+.container:hover input ~ .check-mark {
+  background-color: #ccc;
+}
+
+.container input:checked ~ .check-mark {
+  background-color: #2196f3;
+}
+
+.check-mark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .check-mark:after {
+  display: block;
+}
+
+.container .check-mark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
